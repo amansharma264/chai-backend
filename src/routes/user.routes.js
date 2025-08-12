@@ -3,7 +3,7 @@ import { registerUser } from "../controllers/user.controllers.js";
 import {upload} from "../middlewares/multer.middleware.js"
 
 
-const router = Router()
+const router = Router();
 
 router.route("/register").post(
     upload.fields([
@@ -12,7 +12,7 @@ router.route("/register").post(
             maxCount: 1
         },
          {
-            name: "coverImage",
+            name: "coverImage", 
             maxCount: 1
          }
     ]),
@@ -20,4 +20,4 @@ router.route("/register").post(
 )
 
 
-export default router
+export default router;
